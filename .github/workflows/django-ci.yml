@@ -28,4 +28,4 @@ jobs:
 
     - name: Run Django tests
       run: python manage.py test
-      working_directory: log_dashboard
+      working-directory: log_dashboard
