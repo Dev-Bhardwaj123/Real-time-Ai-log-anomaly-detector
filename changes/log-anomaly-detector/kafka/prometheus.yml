@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s  # Prometheus will pull metrics every 5 seconds
+
+scrape_configs:
+  - job_name: 'django-app'
+    static_configs:
+      - targets: ['host.docker.internal:8000']  # For scraping your local Django app
+  - job_name: 'anomaly_detector'
+    static_configs:
+      - targets: ['host.docker.internal:8001']  # your consumer_anomaly.py metrics endpoint
